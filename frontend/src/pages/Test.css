@@ -1,0 +1,236 @@
+.test-container {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #f6f9fc, #eef2f7);
+    padding: 30px 16px 60px;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    max-width: 900px;
+    margin: auto;
+}
+
+.test-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.question-number {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #222;
+}
+
+.test-timer {
+    padding: 8px 16px;
+    border-radius: 20px;
+    background: #e7f3ff;
+    color: #007cf0;
+    font-weight: 600;
+    font-size: 0.95rem;
+}
+
+.test-timer.danger {
+    background: #ffe8e8;
+    color: #d93025;
+}
+
+.question-card {
+    background: #ffffff;
+    padding: 26px 22px;
+    border-radius: 18px;
+    box-shadow: 0 10px 28px rgba(0, 0, 0, 0.08);
+    margin-bottom: 25px;
+}
+
+.question-text {
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: #111;
+    margin-bottom: 18px;
+    line-height: 1.5;
+}
+
+.option {
+    display: flex;
+    align-items: center;
+    background: #f1f4f9;
+    padding: 12px 14px;
+    border-radius: 12px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    transition: 0.25s;
+}
+
+.option:hover {
+    background: #e8f2ff;
+}
+
+.option input {
+    margin-right: 10px;
+    accent-color: #007cf0;
+}
+
+.option-text {
+    font-size: 0.95rem;
+    color: #333;
+}
+
+.option.selected {
+    background: #e7f3ff;
+    border: 1px solid #007cf0;
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-between;
+    gap: 14px;
+    margin-top: 20px;
+}
+
+.buttons button {
+    width: 45%;
+    padding: 11px 0;
+    border-radius: 26px;
+    border: none;
+    cursor: pointer;
+    font-size: 0.95rem;
+    font-weight: 500;
+    background: linear-gradient(135deg, #007cf0, #00dfd8);
+    color: #fff;
+    transition: 0.3s;
+}
+
+.buttons button:hover {
+    background: linear-gradient(135deg, #005bd4, #00bfb3);
+}
+
+.buttons button:disabled {
+    background: #cfd8dc;
+    cursor: not-allowed;
+}
+
+.question-box-section {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(45px, 45px));
+    justify-content: center;
+    gap: 10px;
+    margin-top: 30px;
+}
+
+.question-box {
+    background: #ffffff;
+    border: 2px solid #d0d7e2;
+    border-radius: 10px;
+    padding: 10px 0;
+    text-align: center;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: all 0.25s ease;
+    color: #333;
+}
+
+.question-box:hover {
+    background: #f1f7ff;
+    border-color: #007cf0;
+}
+
+.question-box.active {
+    background: #007cf0;
+    border-color: #007cf0;
+    color: #ffffff;
+    font-weight: 600;
+}
+
+.question-box.answered {
+    background: #e8f9f1;
+    border-color: #22c55e;
+    color: #166534;
+    font-weight: 600;
+}
+
+.modal-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.55);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+.modal {
+    background: #ffffff;
+    width: 100%;
+    max-width: 360px;
+    padding: 28px 24px;
+    border-radius: 18px;
+    text-align: center;
+    box-shadow: 0 20px 45px rgba(0, 0, 0, 0.25);
+    animation: modalScale 0.3s ease;
+}
+
+.modal h3 {
+    margin-bottom: 12px;
+    color: #111;
+}
+
+.modal p {
+    font-size: 0.9rem;
+    color: #444;
+    margin-bottom: 8px;
+}
+
+.modal-buttons {
+    display: flex;
+    gap: 14px;
+    margin-top: 18px;
+}
+
+.modal-buttons button {
+    flex: 1;
+    padding: 10px;
+    border-radius: 25px;
+    border: none;
+    cursor: pointer;
+    font-size: 0.9rem;
+    background: linear-gradient(135deg, #b92f46, #c6041e);
+    color: #fff;
+    transition: 0.3s;
+}
+
+.modal-buttons button.cancel {
+    background: #e0e0e0;
+    color: #333;
+}
+
+.modal-buttons button:hover {
+    opacity: 0.9;
+}
+
+@keyframes modalScale {
+    from {
+        opacity: 0;
+        transform: scale(0.85);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@media (max-width: 600px) {
+    .buttons {
+        flex-direction: row;
+    }
+
+    .buttons button {
+        width: 50%;
+    }
+
+    .test-header {
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+    }
+}

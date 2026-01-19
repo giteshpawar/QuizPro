@@ -1,0 +1,192 @@
+.contact-page {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #f4f7fb, #eef2f7);
+    padding: 40px 20px 70px;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.contact-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 45px;
+    color: #007cf0;
+}
+
+.contact-header h1 {
+    font-size: 2.4rem;
+    font-weight: 700;
+}
+
+.contact-header svg {
+    font-size: 2.5rem;
+}
+
+.contact-content {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.developer-card {
+    background: #ffffff;
+    width: 340px;
+    padding: 35px 25px;
+    border-radius: 18px;
+    text-align: center;
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.1);
+    transition: 0.4s;
+}
+
+.developer-card:hover {
+    transform: translateY(-10px);
+}
+
+.dev-icon {
+    width: 85px;
+    height: 85px;
+    margin: auto;
+    background: linear-gradient(135deg, #007cf0, #00dfd8);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.3rem;
+    color: #fff;
+    margin-bottom: 15px;
+}
+
+.developer-card h2 {
+    font-size: 1.7rem;
+    color: #111;
+}
+
+.dev-role {
+    font-size: 0.95rem;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.dev-info p {
+    font-size: 0.9rem;
+    color: #444;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.dev-info svg {
+    color: #007cf0;
+}
+
+.dev-info a {
+    color: #007cf0;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.dev-info a:hover {
+    text-decoration: underline;
+}
+
+.contact-card {
+    background: #ffffff;
+    width: 400px;
+    padding: 35px 30px;
+    border-radius: 18px;
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.1);
+    transition: 0.4s;
+}
+
+.contact-card:hover {
+    transform: translateY(-10px);
+}
+
+.contact-card h2 {
+    text-align: center;
+    margin-bottom: 25px;
+    color: #111;
+}
+
+.input-group {
+    display: flex;
+    align-items: center;
+    background: #f1f4f9;
+    padding: 12px 14px;
+    border-radius: 12px;
+    margin-bottom: 15px;
+}
+
+.input-group svg {
+    color: #007cf0;
+    font-size: 1.1rem;
+}
+
+.input-group input {
+    border: none;
+    outline: none;
+    background: transparent;
+    margin-left: 10px;
+    width: 100%;
+    font-size: 0.9rem;
+}
+
+textarea {
+    width: 100%;
+    height: 110px;
+    border: none;
+    outline: none;
+    background: #f1f4f9;
+    padding: 14px;
+    border-radius: 12px;
+    resize: none;
+    font-size: 0.9rem;
+    margin-bottom: 18px;
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 30px;
+    background: linear-gradient(135deg, #007cf0, #00dfd8);
+    color: #fff;
+    font-size: 0.95rem;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: linear-gradient(135deg, #005bd4, #00bfb3);
+}
+
+.form-status {
+    margin-top: 15px;
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+@media (max-width: 900px) {
+    .contact-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .developer-card,
+    .contact-card {
+        width: 100%;
+        max-width: 420px;
+    }
+
+    .contact-header h1 {
+        font-size: 2rem;
+    }
+}
