@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import API from "../api/api";
-import "../Styles/Auth.css";
+import "../styles/Auth.css";
 import {
   FaUser,
   FaEnvelope,
