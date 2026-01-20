@@ -23,14 +23,14 @@ const Home = () => {
             <img src={PracticeImage}  alt="General Knowledge" />
             <h3>General Knowledge</h3>
             <p>Improve your GK with daily practice</p>
-            <Link to="/general-knowledge">Start Practice</Link>
+            <Link to="/gk">Start Practice</Link>
           </div>
 
           <div className="card">
             <img src={PracticeImage}  alt="Marathi Grammar" />
             <h3>Marathi Grammar</h3>
             <p>Master Marathi grammar concepts</p>
-            <Link to="/marathi-grammar">Start Practice</Link>
+            <Link to="/grammar">Start Practice</Link>
           </div>
 
           <div className="card">
