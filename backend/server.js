@@ -10,7 +10,19 @@ const app = express();
 
 app.use(
   cors({
-    origin: "https://quiz-pro-azure.vercel.app",
+    origin: function (origin, callback) {
+
+      if (!origin) return callback(null, true);
+
+      if (origin.startsWith("http://localhost")) {
+        return callback(null, true);
+      }
+
+      if (origin.endsWith(".vercel.app")) {
+        return callback(null, true);
+      }
+      callback(new Error("Not allowed by CORS"));
+    },
     methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
     allowedHeaders: ["Content-Type", "Authorization"],
     credentials: true,
