@@ -30,7 +30,7 @@ const Home = () => {
             <img src={PracticeImage}  alt="Marathi Grammar" />
             <h3>Marathi Grammar</h3>
             <p>Master Marathi grammar concepts</p>
-            <Link to="practice/grammar">Start Practice</Link>
+            <Link to="practice/marathi-grammar">Start Practice</Link>
           </div>
 
           <div className="card">
