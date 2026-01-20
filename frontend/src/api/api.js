@@ -8,15 +8,12 @@ const API = axios.create({
   },
 });
 
-API.interceptors.response.use(
-  (response) => response,
-  (error) => {
-    console.error(
-      "API ERROR:",
-      error?.response?.data || error.message
-    );
-    return Promise.reject(error);
+API.interceptors.request.use((config) => {
+  const token = localStorage.getItem("token");
+  if (token) {
+    config.headers.Authorization = `Bearer ${token}`;
   }
-);
+  return config;
+});
 
 export default API;
