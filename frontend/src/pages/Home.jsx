@@ -23,7 +23,7 @@ const Home = () => {
             <img src={PracticeImage}  alt="General Knowledge" />
             <h3>General Knowledge</h3>
             <p>Improve your GK with daily practice</p>
-            <Link to="practice/genral-knowledge">Start Practice</Link>
+            <Link to="practice/general-knowledge">Start Practice</Link>
           </div>
 
           <div className="card">
