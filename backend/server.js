@@ -36,9 +36,9 @@ app.use("/api/auth", require("./routes/authRoutes"));
 
 app.use("/api/test", require("./routes/testRoutes"));
 
-app.use("/api/general-knowledge", require("./routes/generalKnowledgeRoutes"));
+app.use("/api/generalknowledge", require("./routes/generalKnowledgeRoutes"));
 
-app.use("/api/marathi-grammar", require("./routes/marathiGrammarRoutes"));
+app.use("/api/marathigrammar", require("./routes/marathiGrammarRoutes"));
 
 app.use("/api/math", require("./routes/mathRoutes"));
 
