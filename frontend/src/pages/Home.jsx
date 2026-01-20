@@ -23,28 +23,28 @@ const Home = () => {
             <img src={PracticeImage}  alt="General Knowledge" />
             <h3>General Knowledge</h3>
             <p>Improve your GK with daily practice</p>
-            <Link to="/gk">Start Practice</Link>
+            <Link to="practice/gk">Start Practice</Link>
           </div>
 
           <div className="card">
             <img src={PracticeImage}  alt="Marathi Grammar" />
             <h3>Marathi Grammar</h3>
             <p>Master Marathi grammar concepts</p>
-            <Link to="/grammar">Start Practice</Link>
+            <Link to="practice/grammar">Start Practice</Link>
           </div>
 
           <div className="card">
             <img src={PracticeImage}  alt="Math" />
             <h3>Mathematics</h3>
             <p>Sharpen your math skills</p>
-            <Link to="/math">Start Practice</Link>
+            <Link to="practice/math">Start Practice</Link>
           </div>
 
            <div className="card">
             <img src={PracticeImage}  alt="Math" />
             <h3>Reasoning</h3>
             <p>Practice to improve Intelligence</p>
-            <Link to="/intelligence">Start Practice</Link>
+            <Link to="practice/intelligence">Start Practice</Link>
           </div>
         </div>
       </section>
