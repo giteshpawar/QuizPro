@@ -5,7 +5,7 @@ const Math = require("../models/Math");
 const router = express.Router();
 
 
-router.get("/", auth, async (req, res) => {
+router.get("/", async (req, res) => {
   const questions = await Math.find().sort({
     questionNumber: 1,
   });
@@ -13,7 +13,7 @@ router.get("/", auth, async (req, res) => {
 });
 
 
-router.get("/random", auth, async (req, res) => {
+router.get("/random", async (req, res) => {
   const questions = await Math.aggregate([
     { $sample: { size: 25 } }
   ]);
