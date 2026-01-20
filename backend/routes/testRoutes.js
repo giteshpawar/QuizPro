@@ -4,6 +4,6 @@ const { submitTest } = require("../controllers/testController");
 
 const router = express.Router();
 
-router.post("/submit", auth, submitTest);
+router.post("/submit", submitTest);
 
 module.exports = router;
