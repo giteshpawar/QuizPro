@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const API = axios.create({
-  baseURL: "https://quizpro-ru47.onrender.com/",
+  baseURL: "https://quizpro-8zqq.onrender.com",
 });
 
 
