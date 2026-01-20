@@ -18,8 +18,8 @@ const PracticeRun = () => {
         let url = "";
 
         if (subject === "math") url = "/math";
-        else if (subject === "gk") url = "/general-knowledge";
-        else if (subject === "grammar") url = "/marathi-grammar";
+        else if (subject === "gk") url = "/generalknowledge";
+        else if (subject === "grammar") url = "/marathigrammar";
         else if (subject === "intelligence") url = "/intelligence";
         else {
           navigate("/practice");

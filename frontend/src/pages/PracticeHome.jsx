@@ -24,7 +24,7 @@ const PracticeHome = () => {
           <img src={PracticeImage} alt="General Knowledge Practice" />
           <h3>General Knowledge</h3>
           <p>Boost awareness with updated GK questions</p>
-          <button onClick={() => navigate("/practice/general-knowledge")}>
+          <button onClick={() => navigate("/practice/generalknowledge")}>
             Start Practice
           </button>
         </div>
@@ -33,7 +33,7 @@ const PracticeHome = () => {
           <img src={PracticeImage} alt="Marathi Grammar Practice" />
           <h3>Marathi Grammar</h3>
           <p>Master grammar rules with practice MCQs</p>
-          <button onClick={() => navigate("/practice/marathi-grammar")}>
+          <button onClick={() => navigate("/practice/marathigrammar")}>
             Start Practice
           </button>
         </div>

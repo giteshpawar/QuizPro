@@ -23,8 +23,8 @@ const Test = () => {
         let url = "";
 
         if (subject === "math") url = "/math/random";
-        else if (subject === "gk") url = "/general-knowledge/random";
-        else if (subject === "grammar") url = "/marathi-grammar/random";
+        else if (subject === "gk") url = "/generalknowledge/random";
+        else if (subject === "grammar") url = "/marathigrammar/random";
         else if (subject === "intelligence") url = "/intelligence";
 
         const res = await API.get(url);
