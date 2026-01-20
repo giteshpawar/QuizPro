@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import API from "../api/api";
+import "../Styles/Auth.css";
 import {
   FaUser,
   FaEnvelope,
@@ -8,7 +9,7 @@ import {
   FaUserPlus,
   FaUserShield,
 } from "react-icons/fa";
-import "../styles/Auth.css";
+
 
 const Register = () => {
   const location = useLocation();
