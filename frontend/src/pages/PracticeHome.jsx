@@ -33,7 +33,7 @@ const PracticeHome = () => {
           <img src={PracticeImage} alt="Marathi Grammar Practice" />
           <h3>Marathi Grammar</h3>
           <p>Master grammar rules with practice MCQs</p>
-          <button onClick={() => navigate("/practice/marathi-grammar")}>
+          <button onClick={() => navigate("/practice/grammar")}>
             Start Practice
           </button>
         </div>
