@@ -9,7 +9,7 @@ import {
   FaTimes,
   FaKey,
 } from "react-icons/fa";
-import "../Styles/Auth.css";
+import "../styles/Auth.css";
 
 const Login = ({ setIsLoggedIn }) => {
   const [email, setEmail] = useState("");
