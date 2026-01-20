@@ -7,15 +7,19 @@ dotenv.config();
 connectDB();
 
 const app = express();
+const cors = require("cors");
+
 app.use(
   cors({
     origin: [
       "http://localhost:5173",
-      "https://quiz-pro-n55f-85zx8hiti-giteshs-projects-e207103a.vercel.app"
+      "https://quiz-pro-pi.vercel.app"
     ],
+    methods: ["GET", "POST", "PUT", "DELETE"],
     credentials: true,
   })
 );
+
 app.use(express.json());
 
 
