@@ -3,9 +3,10 @@ const { Resend } = require("resend");
 const resend = new Resend(process.env.RESEND_API_KEY);
 
 const sendEmail = async (to, link) => {
+  console.log(to);
   await resend.emails.send({
     from: "MCQ Test App <onboarding@resend.dev>",
-    to: [process.env.RECEIVER_EMAIL],
+    to: [to],
     subject: "Reset Your Password",
     html: `
       <h3>Password Reset</h3>
