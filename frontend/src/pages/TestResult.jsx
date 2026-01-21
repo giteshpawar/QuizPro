@@ -71,17 +71,17 @@ const TestResult = () => {
           </div>
 
           <div className="section-row">
-            <span>Math</span>
+            <span>Mathematics</span>
             <strong>{sectionScore.math} / 25</strong>
           </div>
 
           <div className="section-row">
-            <span>Grammar</span>
+            <span>Marathi-Grammar</span>
             <strong>{sectionScore.grammar} / 25</strong>
           </div>
 
           <div className="section-row">
-            <span>Intelligence</span>
+            <span>Reasoning</span>
             <strong>{sectionScore.intelligence} / 25</strong>
           </div>
         </div>
