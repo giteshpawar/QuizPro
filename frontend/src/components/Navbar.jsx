@@ -22,7 +22,7 @@ const Navbar = () => {
   const navigate = useNavigate();
   const location = useLocation();
 
-  // Check login status on route change
+  // Check login status
   useEffect(() => {
     const user = localStorage.getItem("user");
     setIsLoggedIn(!!user);
@@ -34,14 +34,6 @@ const Navbar = () => {
     setIsLoggedIn(false);
     setShowProfileMenu(false);
     navigate("/login");
-  };
-
-  // Login validation ONLY for Test page
-  const handleTestClick = (e) => {
-    if (!isLoggedIn) {
-      e.preventDefault();
-      navigate("/login");
-    }
   };
 
   return (
@@ -65,14 +57,13 @@ const Navbar = () => {
           </Link>
         </li>
 
-        {/* LOGIN REQUIRED */}
+        {/* NOW OPEN WITHOUT LOGIN */}
         <li className="desktop-only">
-          <Link to="/test" onClick={handleTestClick}>
+          <Link to="/test">
             <FaClipboardList /> Test
           </Link>
         </li>
 
-        {/* OPEN FOR ALL */}
         <li className="desktop-only">
           <Link to="/contact">
             <FaHeadset /> Contact Us
@@ -143,22 +134,12 @@ const Navbar = () => {
             <FaBook /> Practice
           </Link>
 
-          {/* LOGIN REQUIRED */}
-          <Link
-            to="/test"
-            onClick={(e) => {
-              setShowMobileMenu(false);
-              handleTestClick(e);
-            }}
-          >
+          {/* NOW OPEN WITHOUT LOGIN */}
+          <Link to="/test" onClick={() => setShowMobileMenu(false)}>
             <FaClipboardList /> Test
           </Link>
 
-          {/* OPEN FOR ALL */}
-          <Link
-            to="/contact"
-            onClick={() => setShowMobileMenu(false)}
-          >
+          <Link to="/contact" onClick={() => setShowMobileMenu(false)}>
             <FaHeadset /> Contact Us
           </Link>
         </div>
