@@ -1,5 +1,5 @@
-import { Link, useNavigate, useLocation } from "react-router-dom";
-import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
+import { useState } from "react";
 import {
   FaHome,
   FaBook,
@@ -17,23 +17,12 @@ import "./Navbar.css";
 const Navbar = () => {
   const [showProfileMenu, setShowProfileMenu] = useState(false);
   const [showMobileMenu, setShowMobileMenu] = useState(false);
-  const [isLoggedIn, setIsLoggedIn] = useState(false);
 
-  const navigate = useNavigate();
-  const location = useLocation();
+  const isLoggedIn = !!localStorage.getItem("user");
 
-  // Check login status
-  useEffect(() => {
-    const user = localStorage.getItem("user");
-    setIsLoggedIn(!!user);
-  }, [location]);
-
-  // Logout
   const handleLogout = () => {
     localStorage.removeItem("user");
-    setIsLoggedIn(false);
-    setShowProfileMenu(false);
-    navigate("/login");
+    window.location.href = "/login";
   };
 
   return (
@@ -46,34 +35,24 @@ const Navbar = () => {
       {/* DESKTOP MENU */}
       <ul className="nav-links">
         <li className="desktop-only">
-          <Link to="/">
-            <FaHome /> Home
-          </Link>
+          <Link to="/"><FaHome /> Home</Link>
         </li>
 
         <li className="desktop-only">
-          <Link to="/Practice">
-            <FaBook /> Practice
-          </Link>
-        </li>
-
-        {/* NOW OPEN WITHOUT LOGIN */}
-        <li className="desktop-only">
-          <Link to="/test">
-            <FaClipboardList /> Test
-          </Link>
+          <Link to="/Practice"><FaBook /> Practice</Link>
         </li>
 
         <li className="desktop-only">
-          <Link to="/contact">
-            <FaHeadset /> Contact Us
-          </Link>
+          <Link to="/test"><FaClipboardList /> Test</Link>
+        </li>
+
+        <li className="desktop-only">
+          <Link to="/contact"><FaHeadset /> Contact Us</Link>
         </li>
       </ul>
 
       {/* RIGHT ACTIONS */}
       <div className="right-actions">
-        {/* PROFILE */}
         <div
           className="profile"
           onClick={() => setShowProfileMenu(!showProfileMenu)}
@@ -85,18 +64,12 @@ const Navbar = () => {
               {!isLoggedIn ? (
                 <>
                   <li>
-                    <Link
-                      to="/login"
-                      onClick={() => setShowProfileMenu(false)}
-                    >
+                    <Link to="/login">
                       <FaSignInAlt /> Login
                     </Link>
                   </li>
                   <li>
-                    <Link
-                      to="/register"
-                      onClick={() => setShowProfileMenu(false)}
-                    >
+                    <Link to="/register">
                       <FaUserPlus /> Register
                     </Link>
                   </li>
@@ -112,7 +85,6 @@ const Navbar = () => {
           )}
         </div>
 
-        {/* HAMBURGER */}
         <div
           className="hamburger"
           onClick={() => setShowMobileMenu(!showMobileMenu)}
@@ -134,7 +106,6 @@ const Navbar = () => {
             <FaBook /> Practice
           </Link>
 
-          {/* NOW OPEN WITHOUT LOGIN */}
           <Link to="/test" onClick={() => setShowMobileMenu(false)}>
             <FaClipboardList /> Test
           </Link>
