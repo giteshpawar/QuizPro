@@ -22,11 +22,13 @@ const Navbar = () => {
   const navigate = useNavigate();
   const location = useLocation();
 
+  // Check login status on route change
   useEffect(() => {
     const user = localStorage.getItem("user");
     setIsLoggedIn(!!user);
   }, [location]);
 
+  // Logout
   const handleLogout = () => {
     localStorage.removeItem("user");
     setIsLoggedIn(false);
@@ -34,26 +36,28 @@ const Navbar = () => {
     navigate("/login");
   };
 
+  // Login validation ONLY for Test page
   const handleTestClick = (e) => {
     if (!isLoggedIn) {
-      e.preventDefault();         
-      navigate("/login");          
+      e.preventDefault();
+      navigate("/login");
     }
   };
 
   return (
     <nav className="navbar">
+      {/* LOGO */}
       <div className="brand">
         <img src={logo} alt="QuizPro Logo" />
       </div>
 
+      {/* DESKTOP MENU */}
       <ul className="nav-links">
         <li className="desktop-only">
           <Link to="/">
             <FaHome /> Home
           </Link>
         </li>
-    
 
         <li className="desktop-only">
           <Link to="/Practice">
@@ -61,23 +65,24 @@ const Navbar = () => {
           </Link>
         </li>
 
-
+        {/* LOGIN REQUIRED */}
         <li className="desktop-only">
           <Link to="/test" onClick={handleTestClick}>
             <FaClipboardList /> Test
           </Link>
         </li>
-      
 
-      <li className="desktop-only">
-  <Link to="/contact" onClick={handleTestClick}>
-    <FaHeadset /> Contact Us
-  </Link>
-</li>
-</ul>
+        {/* OPEN FOR ALL */}
+        <li className="desktop-only">
+          <Link to="/contact">
+            <FaHeadset /> Contact Us
+          </Link>
+        </li>
+      </ul>
 
+      {/* RIGHT ACTIONS */}
       <div className="right-actions">
-      
+        {/* PROFILE */}
         <div
           className="profile"
           onClick={() => setShowProfileMenu(!showProfileMenu)}
@@ -89,7 +94,10 @@ const Navbar = () => {
               {!isLoggedIn ? (
                 <>
                   <li>
-                    <Link to="/login" onClick={() => setShowProfileMenu(false)}>
+                    <Link
+                      to="/login"
+                      onClick={() => setShowProfileMenu(false)}
+                    >
                       <FaSignInAlt /> Login
                     </Link>
                   </li>
@@ -113,6 +121,7 @@ const Navbar = () => {
           )}
         </div>
 
+        {/* HAMBURGER */}
         <div
           className="hamburger"
           onClick={() => setShowMobileMenu(!showMobileMenu)}
@@ -123,6 +132,7 @@ const Navbar = () => {
         </div>
       </div>
 
+      {/* MOBILE MENU */}
       {showMobileMenu && (
         <div className="mobile-menu">
           <Link to="/" onClick={() => setShowMobileMenu(false)}>
@@ -133,6 +143,7 @@ const Navbar = () => {
             <FaBook /> Practice
           </Link>
 
+          {/* LOGIN REQUIRED */}
           <Link
             to="/test"
             onClick={(e) => {
@@ -143,16 +154,13 @@ const Navbar = () => {
             <FaClipboardList /> Test
           </Link>
 
+          {/* OPEN FOR ALL */}
           <Link
-  to="/contact"
-  onClick={(e) => {
-    setShowMobileMenu(false);
-    handleTestClick(e);
-  }}
->
-  <FaHeadset /> Contact Us
-</Link>
-
+            to="/contact"
+            onClick={() => setShowMobileMenu(false)}
+          >
+            <FaHeadset /> Contact Us
+          </Link>
         </div>
       )}
     </nav>
