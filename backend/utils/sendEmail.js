@@ -5,7 +5,7 @@ const resend = new Resend(process.env.RESEND_API_KEY);
 const sendEmail = async (to, link) => {
   console.log(to);
   await resend.emails.send({
-    from: "MCQ Test App <onboarding@resend.dev>",
+    from: process.env.SMTP_EMAIL,
     to: [to],
     subject: "Reset Your Password",
     html: `
