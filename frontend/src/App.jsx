@@ -12,6 +12,7 @@ import Contact from "./pages/Contact";
 import PracticeHome from "./pages/PracticeHome";
 import PracticeRun from "./pages/PracticeRun";
 import Finalexam from "./pages/FinalExam";
+import ScrollToTop from "./components/ScrollToTop";
 
 const App = () => {
   const [isLoggedIn, setIsLoggedIn] = useState(
@@ -20,7 +21,7 @@ const App = () => {
 
   return (
     <BrowserRouter>
-      
+      <ScrollToTop />
       <Navbar setIsLoggedIn={setIsLoggedIn} />
 
       <main style={{ minHeight: 0 }}></main>
