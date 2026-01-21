@@ -108,7 +108,7 @@ const Contact = () => {
               required
             />
 
-            <button type="submit">
+            <button type="submit" onClick={handleSubmit}>
               <FaPaperPlane /> Send Message
             </button>
           </form>
