@@ -23,7 +23,11 @@ const Contact = () => {
     e.preventDefault();
 
     try {
-      const res = await API.post("/contact", { name, email, message });
+      const res = await API.post("/contact", {
+        name,
+        email,
+        message,
+      });
 
       if (res.data.success) {
         setStatus("✅ Message sent successfully");
@@ -34,20 +38,18 @@ const Contact = () => {
         setStatus("❌ Failed to send message");
       }
     } catch (err) {
-      setStatus("Server error");
+      setStatus("❌ Server error");
     }
   };
 
   return (
     <div className="contact-page">
-
       <div className="contact-header">
         <FaAddressCard />
         <h1>Contact Us</h1>
       </div>
 
       <div className="contact-content">
-
         <div className="developer-card">
           <div className="dev-icon">
             <FaCode />
@@ -62,13 +64,21 @@ const Contact = () => {
             <p><FaPhone /> +91 9322083516</p>
             <p>
               <FaGithub />
-              <a href="https://github.com/giteshpawar" target="_blank" rel="noreferrer">
+              <a
+                href="https://github.com/giteshpawar"
+                target="_blank"
+                rel="noreferrer"
+              >
                 GitHub
               </a>
             </p>
             <p>
               <FaLinkedin />
-              <a href="https://www.linkedin.com/in/gitesh-pawar-23a524371?utm_source=share_via&utm_content=profile&utm_medium=member_android" target="_blank" rel="noreferrer">
+              <a
+                href="https://www.linkedin.com/in/gitesh-pawar-23a524371"
+                target="_blank"
+                rel="noreferrer"
+              >
                 LinkedIn
               </a>
             </p>
@@ -108,14 +118,14 @@ const Contact = () => {
               required
             />
 
-            <button type="submit" onClick={handleSubmit}>
+            {/* ✅ FIXED: removed onClick */}
+            <button type="submit">
               <FaPaperPlane /> Send Message
             </button>
           </form>
 
           {status && <p className="form-status">{status}</p>}
         </div>
-
       </div>
     </div>
   );
