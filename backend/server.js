@@ -50,6 +50,8 @@ app.use("/api/finalexam", require("./routes/finalTestRoutes"));
 
 app.use("/api/contact", require("./routes/contactRoutes"));
 
+app.use("/api/auth/resetpassword",require("./routes/resetPasswordRoutes"));
+
 
 const PORT = process.env.PORT || 4000;
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
