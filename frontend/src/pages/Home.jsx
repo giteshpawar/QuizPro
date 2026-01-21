@@ -37,7 +37,7 @@ const Home = () => {
             <img src={PracticeImage}  alt="Math" />
             <h3>Mathematics</h3>
             <p>Sharpen your math skills</p>
-            <Link to="practice/math">Start Practice</Link>
+            <Link to="practice1">Start Practice</Link>
           </div>
 
            <div className="card">

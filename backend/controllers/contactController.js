@@ -1,30 +1,21 @@
-const transporter = require("../config/smtp");
+const sendContactMail = require("../utils/sendContactMail");
 
 exports.sendMessage = async (req, res) => {
   try {
     const { name, email, message } = req.body;
 
     if (!name || !email || !message) {
-      return res
-        .status(400)
-        .json({ success: false, msg: "Missing fields" });
+      return res.status(400).json({
+        success: false,
+        msg: "Missing fields",
+      });
     }
 
-    await transporter.sendMail({
-      from: `"Contact Form" <${process.env.SMTP_USER}>`,
-      to: process.env.RECEIVER_EMAIL,
-      subject: `New Contact Message from ${name}`,
-      html: `
-        <h3>New Contact Message</h3>
-        <p><b>Name:</b> ${name}</p>
-        <p><b>Email:</b> ${email}</p>
-        <p><b>Message:</b><br/>${message}</p>
-      `,
-    });
+    await sendContactMail(email, message);
 
     res.json({ success: true });
   } catch (error) {
-    console.error("MAIL SEND ERROR:", error);
+    console.error("CONTACT ERROR:", error);
     res.status(500).json({ success: false });
   }
 };
