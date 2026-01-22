@@ -76,12 +76,12 @@ const TestResult = () => {
           </div>
 
           <div className="section-row">
-            <span>Marathi-Grammar</span>
+            <span>Reasoning</span>
             <strong>{sectionScore.grammar} / 25</strong>
           </div>
 
           <div className="section-row">
-            <span>Reasoning</span>
+            <span>Marathi-Grammar</span>
             <strong>{sectionScore.intelligence} / 25</strong>
           </div>
         </div>
