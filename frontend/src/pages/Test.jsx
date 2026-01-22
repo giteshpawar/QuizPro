@@ -25,7 +25,7 @@ const Test = () => {
         if (subject === "math") url = "/math/random";
         else if (subject === "gk") url = "/generalknowledge/random";
         else if (subject === "grammar") url = "/marathigrammar/random";
-        else if (subject === "intelligence") url = "/intelligence";
+        else if (subject === "intelligence") url = "/intelligence/random";
 
         const res = await API.get(url);
         setQuestions(res.data);
