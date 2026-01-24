@@ -1,11 +1,9 @@
-/* 🔥 Global Reset */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* Full height layout */
 html,
 body,
 #root {
@@ -14,7 +12,6 @@ body,
   padding-top: 60px;
 }
 
-/* Root layout */
 #root {
   display: flex;
   flex-direction: column;
@@ -22,6 +19,5 @@ body,
 
 .page-content {
   padding-top: 60px;
-  /* same as navbar height */
   min-height: calc(100vh - 60px);
 }

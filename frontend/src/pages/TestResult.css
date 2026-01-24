@@ -1,6 +1,3 @@
-/* ========================= */
-/* RESULT PAGE */
-/* ========================= */
 .result-page {
     padding: 24px 16px 40px;
     background: #f4f6fb;
@@ -12,9 +9,6 @@
     margin-bottom: 24px;
 }
 
-/* ========================= */
-/* RESULT CARD */
-/* ========================= */
 .result-card {
     background: #ffffff;
     border-radius: 14px;
@@ -23,9 +17,6 @@
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
 }
 
-/* ========================= */
-/* OPTIONS */
-/* ========================= */
 .result-options {
     display: flex;
     flex-direction: column;
@@ -41,7 +32,6 @@
     font-size: 0.95rem;
 }
 
-/* Correct option */
 .result-option.correct {
     background: #d4f7dc;
     border-color: #2ecc71;
@@ -49,7 +39,6 @@
     font-weight: 600;
 }
 
-/* Wrong selected option */
 .result-option.wrong {
     background: #fdeaea;
     border-color: #e74c3c;
@@ -57,17 +46,11 @@
     font-weight: 600;
 }
 
-/* ========================= */
-/* SUMMARY TEXT */
-/* ========================= */
 .result-summary {
     font-size: 0.9rem;
     color: #444;
 }
 
-/* ========================= */
-/* BACK BUTTON */
-/* ========================= */
 .result-back-btn {
     display: block;
     margin: 30px auto 0;
@@ -84,17 +67,12 @@
     background: linear-gradient(135deg, #005bd4, #00bfb3);
 }
 
-/* ========================= */
-/* RESPONSIVE */
-/* ========================= */
 @media (max-width: 600px) {
     .result-card {
         padding: 16px;
     }
 }
-/* ========================= */
-/* OVERALL SCORE CARD */
-/* ========================= */
+
 .result-summary-card {
     background: linear-gradient(135deg, #007cf0, #00dfd8);
     color: #ffffff;
@@ -109,9 +87,6 @@
     margin: 10px 0;
 }
 
-/* ========================= */
-/* SECTION SCORE CARD */
-/* ========================= */
 .section-score-card {
     background: #ffffff;
     border-radius: 16px;
@@ -136,18 +111,12 @@
     border-bottom: none;
 }
 
-/* ========================= */
-/* RESPONSIVE */
-/* ========================= */
 @media (max-width: 600px) {
     .result-score h3 {
         font-size: 2rem;
     }
 }
 
-/* ========================= */
-/* YOUR ANSWER LABEL */
-/* ========================= */
 .your-answer {
     margin-top: 10px;
     font-size: 0.9rem;
