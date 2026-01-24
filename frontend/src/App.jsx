@@ -1,5 +1,6 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { useState } from "react";
+import { Analytics } from "@vercel/analytics/react";
 import Navbar from "./components/Navbar";
 import Test from "./pages/Test";
 import Login from "./pages/Login";
@@ -41,6 +42,7 @@ const App = () => {
       </Routes>
 
       <Footer />
+      <Analytics />
     </BrowserRouter>
   );
 };
