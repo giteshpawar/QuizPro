@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { Analytics } from "@vercel/analytics/react"
 import "./Home.css";
 import PracticeImage from "../assets/PracticeImage.jpeg";
 
@@ -70,6 +71,7 @@ const Home = () => {
           </div>
         </div>
       </section>
+      <Analytics/>
 
     </div>
   );
