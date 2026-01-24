@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { inject } from '@vercel/analytics';
+import { Analytics } from "@vercel/analytics/react"
 import "./Home.css";
 import PracticeImage from "../assets/PracticeImage.jpeg";
 
@@ -71,7 +71,7 @@ const Home = () => {
           </div>
         </div>
       </section>
-      inject();
+      <Analytics/>
 
     </div>
   );
