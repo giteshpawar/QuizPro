@@ -6,7 +6,7 @@ const Footer = () => {
     <footer className="footer">
       <div className="footer-content">
         <p>Email: <span>giteshpawar2611@gmail.com</span></p>
-        <p>Contact: <span>+91 9322083616</span></p>
+        <p>Contact: <span>+91 9322083516</span></p>
         <p>Devloped by: <span>Gitesh Pawar</span></p>
 
         <div className="footer-icons">
